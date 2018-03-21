@@ -31,18 +31,12 @@
 
 
     <script>
-        var header = new Headers({
-            'Access-Control-Allow-Origin': '*',
-            'Content-Type': 'multipart/form-data'
-        });
-        fetch('https://newsd.co/campaigns.json', {
-                header: header
-            })
+        fetch('https://newsd.co/campaigns.json')
             .then(function(response) {
                 return response.json();
             })
             .then(function(response) {
-                //            console.log(response);
+                //                            console.log('par', response);
                 var authors = response;
                 var output = '';
                 authors.forEach(function(author) {
