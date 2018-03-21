@@ -12,7 +12,7 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="style.css">
     <!-- Custom styles for this template -->
 
 </head>
@@ -22,91 +22,41 @@
 
 
 
-    <main role="main" class="container">
 
-        <div class="container">
-            <div class="row" id="results">
+    <div class="container">
+        <div class="row" id="results">
 
-            </div>
         </div>
+    </div>
 
-    </main>
-    <!-- /.container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+    
     <script>
-        // function createNode(element) {
-        //     return document.createElement(element);
-        // }
-        //
-        // function append(parent, el) {
-        //     return parent.appendChild(el);
-        // }
-        //
-        // var url = 'https://newsd.co/campaigns.json';
-        //
-        // fetch(url)
-        //     .then((resp) => resp.json())
-        //     .then((data) => {
-        //         var output = '';
-        //         data.forEach(function (result) {
-        //             var image = result['ads'][0]['img';
-        //             console.log(image);
-        //             output = `
-        //                <div class="col-sm">
-        //                    <img src="{}" alt="">
-        //                    <h1></h1>
-        //                </div>
-        //                `
-        //         })
-        //
-        //         //                                   console.log(data);
-        //         //         images = [];
-        //         //         h1 = [];
-        //         //         for (var i = 0; i < data.length; i++) {
-        //         //             //             console.log(data[i]['ads'][0]);
-        //         //             images.push(data[i]['ads'][0]['img']);
-        //         //             h1.push(data[i]['ads'][0]['h1'])
-        //         //
-        //         //
-        //         //         }
-        //
-        //         //         console.log(images);
-        //         //         console.log(h1);
-        //         //
-        //     })
-        //     .catch(function (error) {
-        //         // If there is any error you will catch them here
-        //         console.log(JSON.stringify(error));
-        //     });
-
-        //fetch('https://newsd.co/campaigns.json')
-        //    .then(function (response) {
-        //        return response.json();
-        //    })
-        //    .then(function (response) {
-        //        //        console.log(response);
-        //        images = []
-        //        h1 = []
-        //        for (var i = 0; i < response.length; i++) {
-        //            //            console.log(response[i]['ads'][0]);
-        //            images.push(response[i]['ads'][0]['img']);
-        //            h1.push(response[i]['ads'][0]['h1']);
-        //        }
-        //        console.log(images);
-        //        console.log(h1);
-        //
-        //    })
-        //    .catch(function (error) {
-        //        console.log(error);
-        //    })
-
+        fetch('https://newsd.co/campaigns.json')
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(response) {
+                //            console.log(response);
+                var authors = response;
+                var output = '';
+                authors.forEach(function(author) {
+                    console.log(author['ads'][0]);
+                    output += `
+                        <div class="col-4">
+                            <div class="card">
+                              <div class="card-body">
+                                <img src="${author.ads[0].img}">
+                                <h5 class="card-title">${author.ads[0].h1}</h5>
+                              </div>
+                            </div>
+                        </div>
+                            `
+                })
+                document.getElementById('results').innerHTML = output;
+            })
     </script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="app.js"></script>
+    <!--    <script src="app.js"></script>-->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

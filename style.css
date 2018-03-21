@@ -16,7 +16,16 @@ body {
 .navbar-nav a {
     font-size: 15px;
 }
-
+img {
+    width: 100%;
+    height: 100%;
+}
+.card {
+    border: none;
+}
+.card-body {
+    padding: 0;
+}
 .site-content {
     padding: 5rem 5rem 5rem 1rem;
 }
