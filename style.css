@@ -16,16 +16,20 @@ body {
 .navbar-nav a {
     font-size: 15px;
 }
+
 img {
-    width: 100%;
     height: 100%;
+    width: 100%;
 }
+
 .card {
     border: none;
 }
+
 .card-body {
     padding: 0;
 }
+
 .site-content {
     padding: 5rem 5rem 5rem 1rem;
 }
@@ -33,8 +37,8 @@ img {
 .content-media--video {
     background-color: #ddd;
     display: block;
-    position: relative;
     padding: 0 0 56.25% 0;
+    position: relative;
 }
 
 .content-media--video iframe {
