@@ -62,6 +62,6 @@ body {
 
 @media screen and (min-width: 1300px) {
     #featured-video.is-sticky {
-        transform: translateX(270%);
+        transform: translateX(280%);
     }
 }
