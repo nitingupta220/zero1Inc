@@ -31,7 +31,9 @@
 
 
     <script>
-        fetch('https://newsd.co/campaigns.json')
+        fetch('https://newsd.co/campaigns.json', {
+            header: {"Access-Control-Allow-Origin": "*"}
+        })
             .then(function(response) {
                 return response.json();
             })
