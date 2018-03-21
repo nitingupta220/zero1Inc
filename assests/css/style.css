@@ -1,5 +1,6 @@
 body {
     font-family: 'Lato', sans-serif;
+    padding-top: 5rem;
 }
 
 .navbar {
@@ -23,6 +24,7 @@ img {
 
 .card {
     border: none;
+    margin-bottom: 2em;
 }
 
 .card-body {
