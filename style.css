@@ -1,0 +1,67 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.navbar {
+    background-color: white;
+    border-bottom: 2px solid #D18373;
+    padding-left: 10em;
+}
+
+.navbar a {
+    color: #221C1A;
+    font-size: 25px;
+}
+
+.navbar-nav a {
+    font-size: 15px;
+}
+
+.site-content {
+    padding: 5rem 5rem 5rem 1rem;
+}
+
+.content-media--video {
+    background-color: #ddd;
+    display: block;
+    position: relative;
+    padding: 0 0 56.25% 0;
+}
+
+.content-media--video iframe {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#featured-video {
+    transition: width .2s ease-in-out, height .2s ease-in-out, transform .38s ease-in-out;
+}
+
+/** Use .sticky */
+
+#featured-video.is-sticky {
+    position: fixed;
+    top: 80px;
+    left: auto;
+    max-width: 500px;
+    max-height: 200px;
+    width: 280px;
+    height: 158px;
+}
+
+
+
+@media screen and (min-width: 1120px) {
+    #featured-video.is-sticky {
+        transform: translateX(250%);
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    #featured-video.is-sticky {
+        transform: translateX(270%);
+    }
+}
